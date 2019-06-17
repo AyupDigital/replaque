@@ -24,7 +24,8 @@ class OpenApi extends BaseOpenApi implements Responsable
                 Paths\Plaques\PlaquesRootPath::create(),
                 Paths\Plaques\PlaquesNestedPath::create(),
                 Paths\Tickets\TicketsRootPath::create(),
-                Paths\Tickets\TicketsNestedPath::create()
+                Paths\Tickets\TicketsNestedPath::create(),
+                Paths\Tickets\TicketsClosePath::create()
             )
             ->components(Components::create())
             ->security(SecurityRequirement::create())
