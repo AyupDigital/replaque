@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  api:
+    image: replaque/api/app
+    build:
+      context: ./docker/app
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "${APP_PORT}:80"
+
+  node:
+    image: replaque/api/node
+    build:
+      context: ./docker/node
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
