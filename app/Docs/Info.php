@@ -18,12 +18,6 @@ class Info extends BaseInfo
         return parent::create($objectId)
             ->title(config('app.name') . ' API')
             ->description('Documentation on how to use the API')
-            ->contact(
-                Contact::create()
-                    ->name((string)config('ayup.name'))
-                    ->url((string)config('ayup.url'))
-                    ->email((string)config('ayup.email'))
-            )
             ->version('v1');
     }
 }

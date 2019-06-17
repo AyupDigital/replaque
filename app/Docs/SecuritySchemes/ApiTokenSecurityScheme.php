@@ -15,7 +15,7 @@ class ApiTokenSecurityScheme extends SecurityScheme
         return parent::create('ApiToken')
             ->type(static::TYPE_API_KEY)
             ->description('API Token')
-            ->name('token')
+            ->name('api_token')
             ->in(static::IN_QUERY);
     }
 }
