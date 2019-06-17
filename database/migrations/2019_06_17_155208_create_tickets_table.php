@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersTable extends Migration
+class CreateTicketsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('plaque_id');
+            $table->foreign('plaque_id')->references('id')->on('plaques');
             $table->string('name');
-            $table->uuid('api_token')->unique();
+            $table->text('description');
             $table->timestamps();
+            $table->timestamp('closed_at')->nullable();
         });
     }
 
@@ -28,6 +31,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tickets');
     }
 }
