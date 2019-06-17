@@ -7,11 +7,11 @@ use App\Docs\OpenApi;
 class OpenApiController extends Controller
 {
     /**
-     * @param \App\Docs\OpenApi $openApi
-     * @return \App\Docs\OpenApi
+     * @throws \GoldSpecDigital\ObjectOrientedOAS\Exceptions\InvalidArgumentException
+     * @return \GoldSpecDigital\ObjectOrientedOAS\OpenApi
      */
-    public function __invoke(OpenApi $openApi)
+    public function __invoke()
     {
-        return $openApi;
+        return OpenApi::create();
     }
 }
