@@ -22,6 +22,7 @@ class ShowPlaqueOperation extends Operation
             ->action(static::ACTION_GET)
             ->summary('Get a specific plaque')
             ->tags(PlaquesTag::create())
+            ->noSecurity()
             ->responses(
                 Response::ok()->content(
                     MediaType::json()->schema(

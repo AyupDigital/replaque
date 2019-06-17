@@ -27,6 +27,7 @@ class IndexPlaqueOperation extends Operation
             ->action(static::ACTION_GET)
             ->summary('List all plaques')
             ->tags(PlaquesTag::create())
+            ->noSecurity()
             ->parameters(
                 PageParameter::create(),
                 PerPageParameter::create(),

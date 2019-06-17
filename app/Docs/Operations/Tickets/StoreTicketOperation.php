@@ -24,6 +24,7 @@ class StoreTicketOperation extends Operation
             ->action(static::ACTION_POST)
             ->summary('Create a ticket')
             ->tags(TicketsTag::create())
+            ->noSecurity()
             ->requestBody(
                 RequestBody::create()->content(
                     MediaType::json()->schema(StoreTicketSchema::create())
