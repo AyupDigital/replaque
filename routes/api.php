@@ -19,3 +19,7 @@ Route::get('openapi.json', 'OpenApiController')
 
 Route::get('docs', 'DocsController')
     ->name('docs');
+
+Route::apiResource('v1/plaques', 'V1\\PlaqueController');
+Route::apiResource('v1/tickets', 'V1\\TicketController');
+Route::put('v1/tickets/{ticket}/close', 'V1\\Ticket\\CloseController');

@@ -19,7 +19,11 @@ class TicketController extends Controller
         // Authentication required for this endpoint.
         $this->middleware('api');
 
-        //
+        // TODO: Get paginated collection of Ticket models.
+        // https://laravel.com/docs/5.8/pagination#paginating-query-builder-results
+
+        // TODO: Return a JSON response of the paginated set.
+        // https://laravel.com/docs/5.8/eloquent-resources#pagination
     }
 
 
@@ -31,7 +35,14 @@ class TicketController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Validate the request.
+        // TODO: Validate the request
+        // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
+
+        // TODO: Store the Ticket record in the database.
+        // https://laravel.com/docs/5.8/eloquent#inserting-and-updating-models
+
+        // TODO: Return a JSON response of the Ticket.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -46,7 +57,8 @@ class TicketController extends Controller
         // Authentication required for this endpoint.
         $this->middleware('api');
 
-        //
+        // TODO: Return a JSON response of the Ticket.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -62,6 +74,13 @@ class TicketController extends Controller
         $this->middleware('api');
 
         // TODO: Validate the request.
+        // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
+
+        // TODO: Update the Ticket record in the database.
+        // https://laravel.com/docs/5.8/eloquent#inserting-and-updating-models
+
+        // TODO: Return a JSON response of the Ticket.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -75,7 +94,11 @@ class TicketController extends Controller
     {
         // Authentication required for this endpoint.
         $this->middleware('api');
-        
-        //
+
+        // TODO: Delete the Ticket record in the database.
+        // https://laravel.com/docs/5.8/eloquent#deleting-models
+
+        // TODO: Return a resource deleted JSON response.
+        // https://laravel.com/docs/5.8/responses#json-responses
     }
 }

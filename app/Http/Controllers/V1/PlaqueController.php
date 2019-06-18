@@ -16,7 +16,11 @@ class PlaqueController extends Controller
      */
     public function index(Request $request)
     {
-        //
+        // TODO: Get paginated collection of Plaque models.
+        // https://laravel.com/docs/5.8/pagination#paginating-query-builder-results
+
+        // TODO: Return a JSON response of the paginated set.
+        // https://laravel.com/docs/5.8/eloquent-resources#pagination
     }
 
     /**
@@ -30,7 +34,14 @@ class PlaqueController extends Controller
         // Authentication required for this endpoint.
         $this->middleware('api');
 
-        // TODO: Validate the request.
+        // TODO: Validate the request
+        // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
+
+        // TODO: Store the Plaque record in the database.
+        // https://laravel.com/docs/5.8/eloquent#inserting-and-updating-models
+
+        // TODO: Return a JSON response of the Plaque.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -42,7 +53,8 @@ class PlaqueController extends Controller
      */
     public function show(Request $request, Plaque $plaque)
     {
-        //
+        // TODO: Return a JSON response of the Plaque.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -58,6 +70,13 @@ class PlaqueController extends Controller
         $this->middleware('api');
 
         // TODO: Validate the request.
+        // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
+
+        // TODO: Update the Plaque record in the database.
+        // https://laravel.com/docs/5.8/eloquent#inserting-and-updating-models
+
+        // TODO: Return a JSON response of the Plaque.
+        // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
 
     /**
@@ -71,7 +90,11 @@ class PlaqueController extends Controller
     {
         // Authentication required for this endpoint.
         $this->middleware('api');
-        
-        //
+
+        // TODO: Delete the Plaque record in the database.
+        // https://laravel.com/docs/5.8/eloquent#deleting-models
+
+        // TODO: Return a resource deleted JSON response.
+        // https://laravel.com/docs/5.8/responses#json-responses
     }
 }
