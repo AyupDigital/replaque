@@ -19,6 +19,10 @@ class TicketController extends Controller
         // Authentication required for this endpoint.
         $this->middleware('api');
 
+        // TODO: If "filter[plaque_id]" provided, then filter by the plaque_id.
+        // https://laravel.com/docs/5.8/requests#retrieving-input
+        // https://laravel.com/docs/5.8/queries#where-clauses
+
         // TODO: Get paginated collection of Ticket models.
         // https://laravel.com/docs/5.8/pagination#paginating-query-builder-results
 
