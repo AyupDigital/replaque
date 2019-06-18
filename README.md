@@ -23,7 +23,6 @@ API.
 * [Composer documentation](https://getcomposer.org/doc)
 * [NPM documentation](https://docs.npmjs.com)
 * [Blue plaques of Leeds dataset](https://datamillnorth.org/dataset/blue-plaques-of-leeds)
-* [Postman (API client)](https://www.getpostman.com)
 * [PHP Manual (7.3)](https://www.php.net/docs.php)
 
 ## Setup and installation
