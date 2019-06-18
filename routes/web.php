@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LandingController');
+
+Route::get('openapi.json', 'OpenApiController')
+    ->name('openapi.json');
+
+Route::get('docs', 'DocsController')
+    ->name('docs');
