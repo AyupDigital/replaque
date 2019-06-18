@@ -25,12 +25,12 @@ class TicketController extends Controller
      */
     public function index(Request $request)
     {
+        // TODO: Get paginated collection of Ticket models.
+        // https://laravel.com/docs/5.8/pagination#paginating-query-builder-results
+
         // TODO: If "filter[plaque_id]" provided, then filter by the plaque_id.
         // https://laravel.com/docs/5.8/requests#retrieving-input
         // https://laravel.com/docs/5.8/queries#where-clauses
-
-        // TODO: Get paginated collection of Ticket models.
-        // https://laravel.com/docs/5.8/pagination#paginating-query-builder-results
 
         // TODO: Return a JSON response of the paginated set.
         // https://laravel.com/docs/5.8/eloquent-resources#pagination
