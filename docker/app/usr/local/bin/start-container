@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Run migrations.
-php /var/www/html/artisan migrate --force
+php /var/www/html/artisan migrate:fresh --force --seed
 
 # Start supervisor.
 /usr/bin/supervisord

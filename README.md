@@ -1,72 +1,134 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+    <img alt="Replaque" src="https://i.ibb.co/LDyCz3Z/logo.png" width="400px">
 </p>
 
-## About Laravel
+## Introduction
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Replaque is a web app used to maintain the [Blue plaques of Leeds](https://datamillnorth.org/dataset/blue-plaques-of-leeds).
+This is done by maintaining a list of all the Blue plaques, along with a 
+ticketing system, used to raise a request for a Plaque - which could be anything
+from needing a clean, to needing repairs due to vandalism.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+> A blue plaque is a permanent sign installed in a public place in the United 
+> Kingdom and elsewhere to commemorate a link between that location and a famous 
+> person or event, serving as a historical marker.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The app consists of a RESTful JSON API locked down with basic token 
+authentication, accompanied by a JavaScript frontend used to interface with the
+API.
 
-## Learning Laravel
+## Links and resources
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* [Laravel 5.8 documentation](https://laravel.com/docs/5.8)
+* [Composer documentation](https://getcomposer.org/doc)
+* [NPM documentation](https://docs.npmjs.com)
+* [Blue plaques of Leeds dataset](https://datamillnorth.org/dataset/blue-plaques-of-leeds)
+* [Postman (API client)](https://www.getpostman.com)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1400 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Requirements
 
-## Laravel Sponsors
+This project has two sets of requirements, **core** and **optional**. The core
+requirements must be completed by the end of this workshop, whereas the optional
+requirements are for you to complete in your own time. They are real world tasks
+that would need to be carried out on production ready APIs, so it's highly
+recommended you look into them.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Core requirements
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+This skeleton [Laravel 5.8](https://laravel.com/docs/5.8) project has been 
+provided for you, with the foundation work having already been written for you.
 
-## Contributing
+An [OpenAPI](https://swagger.io/docs/specification/about) specification has been
+written to dictate how the API should work. Once you've followed the **Setup and 
+installation** section, you can view this by heading to 
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* [http://localhost/docs](http://localhost/docs) - for Docker setups
+* [http://todo/docs](http://todo/docs) - for Cloud9 setups
 
-## Security Vulnerabilities
+Your jobs will be to finish the API by:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Complete the controller logic (files located in `/app/Http/Controllers/V1`) 
+* Complete the API resource logic (files located in `/app/Http/Resources`)
 
-## License
+### Optional requirements
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Most of these requirements require knowledge of the subject before being able to
+implement them, which is why they have been marked as optional. Look into the
+following:
+
+* TODO
+
+## Setup and installation
+
+Depending on your chosen development environment, the setup and installation
+slightly differs. Follow the one that matches what you picked:
+
+### Docker
+
+A Docker setup has been provided for you to ensure you have the infrastructure
+you need for working on this project. To keep things simple, we have also
+provided a helper script called `develop` to abstract the complexities of the 
+Docker Compose CLI away from you. 
+
+**This helper script will only work on Mac or Linux. If you plan on using this 
+on a different operating system, then please speak to a member of the workshop 
+team.**
+
+#### Spinning up the containers
+
+When you first spin up the containers, it may take some time as it first needs
+to download the images. You can do this as follows:
+
+```bash
+./develop up -d
+```
+
+When you need to stop the containers, run the following:
+
+```bash
+./develop down
+```
+
+> Note that whenever you stop and start the containers, the database will be
+> reset to its initial state.
+
+#### Installing dependencies
+
+Both PHP (Composer) and Node (NPM) dependencies need to be installed, with an
+extra step for then compiling the static assets (JS and CSS):
+
+```
+./develop composer install
+./develop npm install
+./develop npm run dev
+```
+
+#### Generating an encryption key
+
+Although not explicitly used in this app, Laravel needs one for things such as
+encrypting sessions and cookies:
+
+```bash
+./develop artisan key:generate
+```
+
+#### Running migrations and seeders
+
+The database tables along with the Plaque data has already been provided, so you
+only need to run the migration to create the tables and then the seeders to
+populate the `plaques` table with the data:
+
+```bash
+./develop artisan migrate:fresh --seed
+```
+
+### Cloud9
+
+*TODO*
+
+## Deploying
+
+Deployment is done through [Heroku](https://www.heroku.com) whenever you
+push a commit to the `master` branch.
+
+*TODO*
