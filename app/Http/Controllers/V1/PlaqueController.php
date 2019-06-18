@@ -91,6 +91,9 @@ class PlaqueController extends Controller
         // Authentication required for this endpoint.
         $this->middleware('api');
 
+        // TODO: Delete the related ticket records in the database.
+        // https://laravel.com/docs/5.8/eloquent-relationships#one-to-many
+
         // TODO: Delete the Plaque record in the database.
         // https://laravel.com/docs/5.8/eloquent#deleting-models
 
