@@ -24,49 +24,7 @@ API.
 * [NPM documentation](https://docs.npmjs.com)
 * [Blue plaques of Leeds dataset](https://datamillnorth.org/dataset/blue-plaques-of-leeds)
 * [Postman (API client)](https://www.getpostman.com)
-
-## Requirements
-
-This project has two sets of requirements, **core** and **optional**. The core
-requirements must be completed by the end of this workshop, whereas the optional
-requirements are for you to complete in your own time. They are real world tasks
-that would need to be carried out on production ready APIs, so it's highly
-recommended you look into them.
-
-### Core requirements
-
-This skeleton [Laravel 5.8](https://laravel.com/docs/5.8) project has been 
-provided for you, with the foundation work having already been written for you.
-
-#### OpenAPI specification
-
-An [OpenAPI](https://swagger.io/docs/specification/about) specification has been
-written to dictate how the API should work. Once you've followed the **Setup and 
-installation** section, you can view the docs by heading to:
-
-* [http://localhost/docs](http://localhost/docs) - for Docker setups
-* [http://todo/docs](http://todo/docs) - for Cloud9 setups
-
-#### For you to do
-
-Your jobs will be to finish the API by:
-
-* Complete the controller logic (files located in `app/Http/Controllers/V1/*`) 
-* Complete the API resource logic (files located in `app/Http/Resources/*`)
-
-#### Accessing authenticated endpoints
-
-When testing endpoints that require authenticated users, you must provide the
-`api_token` parameter as part of the query string. Each user of the system has a
-unique token which you can find in the `database/seeds/UsersTableSeeder.php` file.
-
-### Optional requirements
-
-Most of these requirements require knowledge of the subject before being able to
-implement them, which is why they have been marked as optional. Look into the
-following:
-
-* TODO
+* [PHP Manual (7.3)](https://www.php.net/docs.php)
 
 ## Setup and installation
 
@@ -80,9 +38,8 @@ you need for working on this project. To keep things simple, we have also
 provided a helper script called `develop` to abstract the complexities of the 
 Docker Compose CLI away from you. 
 
-**This helper script will only work on Mac or Linux. If you plan on using this 
-on a different operating system, then please speak to a helper at the 
-workshop.**
+**This guide will only work on Mac or Linux. If you plan on using this on a 
+different operating system, then please speak to a helper at the workshop.**
 
 #### Spinning up the containers
 
@@ -109,16 +66,21 @@ extra step for then compiling the static assets (JS and CSS):
 
 ```
 ./develop composer install
+
 ./develop npm install
+
 ./develop npm run dev
 ```
 
 #### Generating an encryption key
 
 Although not explicitly used in this app, Laravel needs one for things such as
-encrypting sessions and cookies:
+encrypting sessions and cookies. You will first need to copy the example 
+environment file, as that is where the encryption key will be stored: 
 
 ```bash
+cp .env.example .env
+
 ./develop artisan key:generate
 ```
 
@@ -129,8 +91,15 @@ only need to run the migration to create the tables and then the seeders to
 populate the `plaques` table with the data:
 
 ```bash
+touch database/database.sqlite
+
 ./develop artisan migrate:fresh --seed
 ```
+
+#### Accessing the API
+
+You should now be able to access the API at [http://localhost](http://localhost)
+and the API docs at [http://localhost/docs](http://localhost/docs).
 
 ### Cloud9
 
