@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class PlaqueController extends Controller
 {
+    public function __construct()
+    {
+        // Authentication required for these endpoints.
+        $this->middleware('auth')->except('index', 'show');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -31,9 +37,6 @@ class PlaqueController extends Controller
      */
     public function store(Request $request)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Validate the request
         // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
 
@@ -66,9 +69,6 @@ class PlaqueController extends Controller
      */
     public function update(Request $request, Plaque $plaque)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Validate the request.
         // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
 
@@ -88,9 +88,6 @@ class PlaqueController extends Controller
      */
     public function destroy(Request $request, Plaque $plaque)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Delete the related ticket records in the database.
         // https://laravel.com/docs/5.8/eloquent-relationships#one-to-many
 

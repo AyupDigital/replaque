@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 class TicketController extends Controller
 {
     /**
+     * TicketController constructor.
+     */
+    public function __construct()
+    {
+        // Authentication required for these endpoints.
+        $this->middleware('auth')->except('store');
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @param \Illuminate\Http\Request $request
@@ -16,9 +25,6 @@ class TicketController extends Controller
      */
     public function index(Request $request)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: If "filter[plaque_id]" provided, then filter by the plaque_id.
         // https://laravel.com/docs/5.8/requests#retrieving-input
         // https://laravel.com/docs/5.8/queries#where-clauses
@@ -58,9 +64,6 @@ class TicketController extends Controller
      */
     public function show(Request $request, Ticket $ticket)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Return a JSON response of the Ticket.
         // https://laravel.com/docs/5.8/eloquent-resources#writing-resources
     }
@@ -74,9 +77,6 @@ class TicketController extends Controller
      */
     public function update(Request $request, Ticket $ticket)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Validate the request.
         // https://laravel.com/docs/5.8/validation#quick-writing-the-validation-logic
 
@@ -96,9 +96,6 @@ class TicketController extends Controller
      */
     public function destroy(Request $request, Ticket $ticket)
     {
-        // Authentication required for this endpoint.
-        $this->middleware('api');
-
         // TODO: Delete the Ticket record in the database.
         // https://laravel.com/docs/5.8/eloquent#deleting-models
 
