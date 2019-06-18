@@ -38,17 +38,27 @@ recommended you look into them.
 This skeleton [Laravel 5.8](https://laravel.com/docs/5.8) project has been 
 provided for you, with the foundation work having already been written for you.
 
+#### OpenAPI specification
+
 An [OpenAPI](https://swagger.io/docs/specification/about) specification has been
 written to dictate how the API should work. Once you've followed the **Setup and 
-installation** section, you can view this by heading to 
+installation** section, you can view the docs by heading to:
 
 * [http://localhost/docs](http://localhost/docs) - for Docker setups
 * [http://todo/docs](http://todo/docs) - for Cloud9 setups
 
+#### For you to do
+
 Your jobs will be to finish the API by:
 
-* Complete the controller logic (files located in `/app/Http/Controllers/V1`) 
-* Complete the API resource logic (files located in `/app/Http/Resources`)
+* Complete the controller logic (files located in `app/Http/Controllers/V1/*`) 
+* Complete the API resource logic (files located in `app/Http/Resources/*`)
+
+#### Accessing authenticated endpoints
+
+When testing endpoints that require authenticated users, you must provide the
+`api_token` parameter as part of the query string. Each user of the system has a
+unique token which you can find in the `database/seeds/UsersTableSeeder.php` file.
 
 ### Optional requirements
 
@@ -71,8 +81,8 @@ provided a helper script called `develop` to abstract the complexities of the
 Docker Compose CLI away from you. 
 
 **This helper script will only work on Mac or Linux. If you plan on using this 
-on a different operating system, then please speak to a member of the workshop 
-team.**
+on a different operating system, then please speak to a helper at the 
+workshop.**
 
 #### Spinning up the containers
 
@@ -90,7 +100,7 @@ When you need to stop the containers, run the following:
 ```
 
 > Note that whenever you stop and start the containers, the database will be
-> reset to its initial state.
+> reset to its initial state (with the seeded data).
 
 #### Installing dependencies
 
