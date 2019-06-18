@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Docs;
 
-use GoldSpecDigital\ObjectOrientedOAS\Objects\Contact;
 use GoldSpecDigital\ObjectOrientedOAS\Objects\Info as BaseInfo;
 
 class Info extends BaseInfo
