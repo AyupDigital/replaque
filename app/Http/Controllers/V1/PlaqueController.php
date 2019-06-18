@@ -27,6 +27,9 @@ class PlaqueController extends Controller
      */
     public function store(Request $request)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+
         // TODO: Validate the request.
     }
 
@@ -51,6 +54,9 @@ class PlaqueController extends Controller
      */
     public function update(Request $request, Plaque $plaque)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+
         // TODO: Validate the request.
     }
 
@@ -63,6 +69,9 @@ class PlaqueController extends Controller
      */
     public function destroy(Request $request, Plaque $plaque)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+        
         //
     }
 }

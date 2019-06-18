@@ -16,6 +16,9 @@ class TicketController extends Controller
      */
     public function index(Request $request)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+
         //
     }
 
@@ -40,6 +43,9 @@ class TicketController extends Controller
      */
     public function show(Request $request, Ticket $ticket)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+
         //
     }
 
@@ -52,6 +58,9 @@ class TicketController extends Controller
      */
     public function update(Request $request, Ticket $ticket)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+
         // TODO: Validate the request.
     }
 
@@ -64,6 +73,9 @@ class TicketController extends Controller
      */
     public function destroy(Request $request, Ticket $ticket)
     {
+        // Authentication required for this endpoint.
+        $this->middleware('api');
+        
         //
     }
 }
