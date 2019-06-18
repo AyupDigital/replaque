@@ -8,6 +8,7 @@
   >
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ config('app.name') }} API</title>
+  @include('_favicons')
   <style>
     html {
       height: 100%;

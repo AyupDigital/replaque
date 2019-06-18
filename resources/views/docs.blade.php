@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ config('app.name') }} API Docs</title>
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+  @include('_favicons')
 </head>
 <body>
   <div id="openapi"></div>
